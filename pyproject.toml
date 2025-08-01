@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dataset-curator"
+version = "0.1.0"
+description = "A GUI-based dataset curation, scraping, visualization, and ML modeling tool for beginners and analysts."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Charlham El", email = "your_email@example.com" }
+]
+keywords = ["GUI", "Data Curation", "Scraping", "ML", "PostgreSQL", "Visualization", "Python"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+dependencies = []  # All handled via requirements.txt
+
+[project.scripts]
+run-app = "run:main"
+
+[tool.setuptools]
+packages = ["your_app_folder_name"]
+
+[tool.setuptools.package-data]
+"*" = ["*.ui", "*.json", "*.yaml", "*.txt", "*.csv"]
+
+[tool.pyinstaller]
+# Optional: You can define this section later for build automation\
